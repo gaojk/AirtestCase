@@ -63,7 +63,7 @@ class CustomAirtestCase(AirtestCase):
                     result["name"] = airName.replace('.air', '')
                     result["result"] = rpt.test_result
                     results.append(result)
-        # 生成聚合报告
+        # 生成聚合报告-呵呵
         env = jinja2.Environment(
             loader=jinja2.FileSystemLoader(root_dir),
             extensions=(),
