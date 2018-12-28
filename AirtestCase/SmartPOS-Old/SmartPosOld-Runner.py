@@ -63,7 +63,7 @@ class CustomAirtestCase(AirtestCase):
                     result["name"] = airName.replace('.air', '')
                     result["result"] = rpt.test_result
                     results.append(result)
-        # 生成聚合报告-呵呵大
+        # 生成聚合报告
         env = jinja2.Environment(
             loader=jinja2.FileSystemLoader(root_dir),
             extensions=(),
@@ -79,6 +79,6 @@ class CustomAirtestCase(AirtestCase):
 
 if __name__ == '__main__':
     test = CustomAirtestCase()
-    # device = ['android:2d87aa41']
-    device = ['android:127.0.0.1:62001']
-    test.run_air('E:\\AirtestCase\\用例集', device)
+    device = ['android:2d87aa41']
+    # device = ['android:127.0.0.1:62001']
+    test.run_air('E:\\AirtestCase\\SmartPOS-Old\\用例集', device)
