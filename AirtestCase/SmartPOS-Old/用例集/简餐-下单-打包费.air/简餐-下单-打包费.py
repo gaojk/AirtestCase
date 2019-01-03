@@ -8,6 +8,7 @@ poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=Fa
 
 auto_setup(__file__)
 touch(Template(r"tpl1546074092173.png", record_pos=(-0.339, -0.237), resolution=(1366, 768)))
+sleep(1)
 touch(Template(r"tpl1546071853905.png", record_pos=(-0.224, 0.01), resolution=(1366, 768)))
 touch(Template(r"tpl1546071874112.png", record_pos=(0.252, -0.144), resolution=(1366, 768)))
 assert_exists(Template(r"tpl1546071908607.png", record_pos=(0.354, -0.085), resolution=(1366, 768)), "验证下单打包费是否已增加")
