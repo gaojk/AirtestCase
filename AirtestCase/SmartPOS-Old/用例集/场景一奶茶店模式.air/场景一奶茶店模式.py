@@ -40,7 +40,7 @@ sleep(2)
 # prop3=poco("com.yhbc.tablet:id/tv_note").get_text()
 # print("prop3="+prop3)
 # # assert_equal("【打包】",prop3,"属性显示=【打包】")
-assert_exists(Template(r"tpl1546523530256.png", record_pos=(0.351, -0.102), resolution=(1366, 768)), "请填写测试点")
+assert_exists(Template(r"tpl1546523530256.png", record_pos=(0.351, -0.102), resolution=(1366, 768)), "菠萝啤增加成功")
 
 assert_exists(Template(r"tpl1546521341641.png", record_pos=(0.351, 0.031), resolution=(1366, 768)), "菜单显示打包")
 # 验证购物车中订单金额是否正确
