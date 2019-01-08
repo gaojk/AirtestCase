@@ -8,7 +8,10 @@ poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=Fa
 
 auto_setup(__file__)
 touch(Template(r"tpl1546074092173.png", record_pos=(-0.339, -0.237), resolution=(1366, 768)))
-sleep(2)
+sleep(1)
+touch(Template(r"tpl1546934613612.png", record_pos=(-0.444, -0.143), resolution=(1366, 768)))
+sleep(1)
+
 touch(Template(r"tpl1546498999958.png", record_pos=(-0.111, 0.007), resolution=(1366.0, 768.0)))
 
 # 点击菜单中的商品“雪梨汁”
@@ -36,6 +39,3 @@ sleep(2.0)
 order_total_price=poco("com.yhbc.tablet:id/tv_total_price").get_text()
 print("order_total_price="+order_total_price)
 assert_equal(total_price,order_total_price," 订单详情-验证金额总价是否=13")
-
-
-

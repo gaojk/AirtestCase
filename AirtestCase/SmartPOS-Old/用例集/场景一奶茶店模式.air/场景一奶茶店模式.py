@@ -11,6 +11,10 @@ auto_setup(__file__)
 # 点餐操作
 touch(Template(r"tpl1546074092173.png", record_pos=(-0.339, -0.237), resolution=(1366, 768)))
 sleep(1)
+touch(Template(r"tpl1546934613612.png", record_pos=(-0.444, -0.143), resolution=(1366, 768)))
+
+sleep(1)
+
 touch(Template(r"tpl1546520822277.png", record_pos=(0.122, 0.01), resolution=(1366, 768)))
 touch(Template(r"tpl1546520834322.png", record_pos=(0.156, -0.084), resolution=(1366, 768)))
 touch(Template(r"tpl1546520930485.png", record_pos=(0.295, -0.106), resolution=(1366, 768)))

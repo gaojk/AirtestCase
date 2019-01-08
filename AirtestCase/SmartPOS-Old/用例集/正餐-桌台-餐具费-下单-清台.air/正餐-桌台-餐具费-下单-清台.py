@@ -13,6 +13,9 @@ assert_exists(Template(r"tpl1545989483597.png", record_pos=(0.0, -0.17), resolut
 
 touch(Template(r"tpl1545988828587.png", record_pos=(0.002, -0.063), resolution=(1366, 768)))
 touch(Template(r"tpl1545988840243.png", record_pos=(-0.002, 0.098), resolution=(1366, 768)))
+sleep(1)
+touch(Template(r"tpl1546934613612.png", record_pos=(-0.444, -0.143), resolution=(1366, 768)))
+sleep(1)
 touch(Template(r"tpl1546077516867.png", record_pos=(-0.223, 0.011), resolution=(1366, 768)))
 sleep(2.0)
 touch(Template(r"tpl1545988897393.png", record_pos=(0.425, 0.221), resolution=(1366, 768)))

@@ -10,6 +10,9 @@ auto_setup(__file__)
 # 点餐操作
 touch(Template(r"tpl1546074092173.png", record_pos=(-0.339, -0.237), resolution=(1366, 768)))
 sleep(1)
+
+touch(Template(r"tpl1546934613612.png", record_pos=(-0.444, -0.143), resolution=(1366, 768)))
+sleep(1)
 touch(Template(r"tpl1546520822277.png", record_pos=(0.122, 0.01), resolution=(1366, 768)))
 touch(Template(r"tpl1546591423210.png", record_pos=(0.152, -0.088), resolution=(1366, 768)))
 
@@ -97,7 +100,3 @@ assert_equal("8.0",order_total_price," 订单详情-验证金额总价是否=8.0
 # 验证已结账订单支付方式
 pay_mode=poco("com.yhbc.tablet:id/order_listview").child("android.widget.LinearLayout")[0].child("com.yhbc.tablet:id/ll_item").child("com.yhbc.tablet:id/ll_click_pay_model").child("com.yhbc.tablet:id/tv_pay_model").get_text()
 assert_equal("人工现金",pay_mode," 订单详情-验证支付方式=人工现金")
-
-
-
-

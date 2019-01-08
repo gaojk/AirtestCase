@@ -9,6 +9,9 @@ poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=Fa
 auto_setup(__file__)
 touch(Template(r"tpl1546074092173.png", record_pos=(-0.339, -0.237), resolution=(1366, 768)))
 sleep(1)
+touch(Template(r"tpl1546934613612.png", record_pos=(-0.444, -0.143), resolution=(1366, 768)))
+sleep(1)
+
 touch(Template(r"tpl1546509518945.png", record_pos=(-0.105, -0.176), resolution=(1366, 768)))
 
 touch(Template(r"tpl1546509549500.png", record_pos=(0.422, 0.222), resolution=(1366, 768)))
