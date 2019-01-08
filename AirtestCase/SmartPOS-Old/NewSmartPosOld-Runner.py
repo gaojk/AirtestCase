@@ -8,7 +8,7 @@ import io
 import time
 import allcase_list  # 调用数组文件
 
-alltestnames = allcase_list.shop_list()
+alltestnames = allcase_list.case_list()
 print(alltestnames)
 
 
