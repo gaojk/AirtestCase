@@ -1,5 +1,6 @@
 from airtest.cli.runner import AirtestCase, run_script
 from argparse import *
+from traceback import print_exc
 import airtest.report.report as report
 import jinja2
 import shutil
@@ -7,9 +8,13 @@ import os
 import io
 import time
 import allcase_list  # 调用数组文件
+import logging.config
 
+logging.config.fileConfig('logging.conf')
+logger = logging.getLogger('root')
 alltestnames = allcase_list.case_list()
 print(alltestnames)
+logger.info(alltestnames)
 
 
 class CustomAirtestCase(AirtestCase):
@@ -59,6 +64,8 @@ class CustomAirtestCase(AirtestCase):
                 try:
                     run_script(args, AirtestCase)
                 except:
+                    # 创建一个日志器logger
+                    logger.info(print_exc()) # 打印出异常
                     pass
                 finally:
                     rpt = report.LogToHtml(script, log)
