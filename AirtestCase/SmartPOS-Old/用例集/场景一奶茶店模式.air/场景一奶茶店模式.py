@@ -37,6 +37,7 @@ assert_equal("+去冰",prop2,"属性显示=+去冰")
 
 touch(Template(r"tpl1546521220047.png", record_pos=(-0.328, 0.012), resolution=(1366, 768)))
 touch(Template(r"tpl1546521240997.png", record_pos=(0.3, -0.105), resolution=(1366, 768)))
+# 打包 
 poco("com.yhbc.tablet:id/pack").click()
 touch(Template(r"tpl1546499377959.png", record_pos=(-0.239, 0.198), resolution=(1366, 768)))
 sleep(2)
