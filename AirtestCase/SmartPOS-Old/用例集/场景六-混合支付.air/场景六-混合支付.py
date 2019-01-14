@@ -1,5 +1,5 @@
 # -*- encoding=utf8 -*-
-__author__ = "Administrator"
+__author__ = "lsd"
 
 from airtest.core.api import *
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
