@@ -65,7 +65,8 @@ touch(Template(r"tpl1546510092623.png", record_pos=(0.244, 0.018), resolution=(1
 touch(Template(r"tpl1546510100461.png", record_pos=(0.102, 0.056), resolution=(1366, 768)))
 touch(Template(r"tpl1546510092623.png", record_pos=(0.244, 0.018), resolution=(1366, 768)))
 touch(Template(r"tpl1546510092623.png", record_pos=(0.244, 0.018), resolution=(1366, 768)))
-touch(Template(r"tpl1546510113059.png", record_pos=(0.242, -0.02), resolution=(1366, 768)))
+touch(Template(r"tpl1547522417756.png", record_pos=(0.245, -0.017), resolution=(1366, 768)))
+
 touch(Template(r"tpl1546509662836.png", record_pos=(0.424, -0.118), resolution=(1366, 768)))
 sleep(3)
 # 验证会员查询是否成功
