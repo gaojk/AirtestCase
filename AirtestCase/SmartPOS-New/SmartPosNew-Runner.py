@@ -5,11 +5,19 @@ import jinja2
 import shutil
 import os
 import io
+import time
+import allcase_list  # 调用数组文件
+import logging.config
 
+logging.config.fileConfig('logging.conf')
+logger = logging.getLogger('root')
+alltestnames = allcase_list.case_list()
+logger.info(alltestnames)
+conf_root_dir='E:\\AirtestCase\\SmartPOS-New\\'
 
 class CustomAirtestCase(AirtestCase):
     def setUp(self):
-        print("custom setup")
+        logger.info("custom setup")
         # add var/function/class/.. to globals
         # self.scope["hunter"] = "i am hunter"
         # self.scope["add"] = lambda x: x+1
@@ -19,7 +27,7 @@ class CustomAirtestCase(AirtestCase):
         super(CustomAirtestCase, self).setUp()
 
     def tearDown(self):
-        print("custom tearDown")
+        logger.info("custom tearDown")
         # exec teardown script
         # self.exec_other_script("teardown.owl")
         super(CustomAirtestCase, self).setUp()
@@ -33,23 +41,22 @@ class CustomAirtestCase(AirtestCase):
             shutil.rmtree(root_log)
         else:
             os.makedirs(root_log)
-            print(str(root_log) + 'is created')
-
-        for f in os.listdir(root_dir):
+            logger.info('log文件夹位置=' + str(root_log))
+        for f in alltestnames:
             if f.endswith(".air"):
                 # f为.air案例名称：手机银行.air
                 airName = f
                 script = os.path.join(root_dir, f)
                 # airName_path为.air的全路径：D:\tools\airtestCase\案例集\log\手机银行
-                print(script)
+                logger.info('执行用例全路径='+script)
                 # 日志存放路径和名称：D:\tools\airtestCase\案例集\log\手机银行1
                 log = os.path.join(root_dir, 'log' + '\\' + airName.replace('.air', ''))
-                print(log)
+                logger.info('用例log保存文件夹=' + log)
                 if os.path.isdir(log):
                     shutil.rmtree(log)
                 else:
                     os.makedirs(log)
-                    print(str(log) + 'is created')
+                    logger.info('log保存路径=' + str(root_log))
                 output_file = log + '\\' + 'log.html'
                 args = Namespace(device=device, log=log, recording=None, script=script)
                 try:
@@ -58,27 +65,37 @@ class CustomAirtestCase(AirtestCase):
                     pass
                 finally:
                     rpt = report.LogToHtml(script, log)
-                    rpt.report("log_template.html", output_file=output_file)
+                    try:
+                        rpt.report("log_template.html", output_file=output_file)
+                    except Exception as e:
+                        # 创建一个日志器logger
+                        logger.exception(str(e))
+                        pass
                     result = {}
                     result["name"] = airName.replace('.air', '')
                     result["result"] = rpt.test_result
                     results.append(result)
         # 生成聚合报告
+        root_dir_summary = conf_root_dir+'summary-log'
+        logger.info(root_dir)
         env = jinja2.Environment(
-            loader=jinja2.FileSystemLoader(root_dir),
+            loader=jinja2.FileSystemLoader(root_dir_summary),
             extensions=(),
             autoescape=True
         )
-        template = env.get_template("summary_template.html", root_dir)
+        now = time.strftime("%Y%m%d-%H%M%S", time.localtime(time.time()))
+        summary_name=now+"summary.html"
+
+        template = env.get_template("summary_template.html", root_dir_summary)
         html = template.render({"results": results})
-        output_file = os.path.join(root_dir, "summary.html")
+        output_file = os.path.join(root_dir_summary, summary_name)
+        logger.info('summary全路径=' + output_file)
         with io.open(output_file, 'w', encoding="utf-8") as f:
             f.write(html)
-        print(output_file)
 
 
 if __name__ == '__main__':
     test = CustomAirtestCase()
     device = ['android:2d87aa41']
     # device = ['android:127.0.0.1:62001']
-    test.run_air('E:\\AirtestCase\\SmartPOS-New\\用例集', device)
+    test.run_air(conf_root_dir+'用例集', device)
