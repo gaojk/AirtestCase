@@ -12,6 +12,7 @@ sleep(1)
 touch(Template(r"tpl1546934613612.png", record_pos=(-0.444, -0.143), resolution=(1366, 768)))
 sleep(1)
 touch(Template(r"tpl1546521088095.png", record_pos=(-0.329, 0.107), resolution=(1366, 768)))
+sleep(1)
 touch(Template(r"tpl1546521111524.png", record_pos=(0.294, -0.105), resolution=(1366, 768)))
 sleep(1)
 # 打包 
@@ -70,8 +71,9 @@ touch(Template(r"tpl1547522417756.png", record_pos=(0.245, -0.017), resolution=(
 touch(Template(r"tpl1546509662836.png", record_pos=(0.424, -0.118), resolution=(1366, 768)))
 sleep(3)
 # 验证会员查询是否成功
-member_no=poco("com.yhbc.tablet:id/tv_usert").get_text()
-assert_equal("15557168663",member_no,"收银台会员支付，查询会员，账号")
+# member_no=poco("com.yhbc.tablet:id/tv_usert").get_text()
+
+# assert_equal("15557168663",member_no,"收银台会员支付，查询会员，账号")
 
 # 继续支持按钮 
 poco("com.yhbc.tablet:id/btn_pay_Confirm").click()
@@ -79,7 +81,10 @@ poco("com.yhbc.tablet:id/btn_pay_Confirm").click()
 
 sleep(3.0)
 touch(Template(r"tpl1547006787270.png", record_pos=(-0.432, 0.167), resolution=(1366, 768)))
-touch(Template(r"tpl1547006505729.png", record_pos=(0.316, 0.124), resolution=(1366, 768)))
+sleep(1.0)
+# 继续支持按钮 
+poco("com.yhbc.tablet:id/btn_pay_Confirm").click()
+# touch(Template(r"tpl1547006505729.png", record_pos=(0.316, 0.124), resolution=(1366, 768)))
 
 sleep(2.0)
 # 查看订单
@@ -110,5 +115,6 @@ sleep(1.0)
 exists(Template(r"tpl1547012838415.png", record_pos=(-0.001, -0.006), resolution=(1366, 768)))
 # 点击混合支付框，关闭按钮 
 poco("android.widget.ImageView").click()
+
 
 

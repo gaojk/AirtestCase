@@ -7,6 +7,8 @@ from poco.drivers.android.uiautomation import AndroidUiautomationPoco
 poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=False)
 
 auto_setup(__file__)
+# touch(Template(r"tpl1546063268698.png", record_pos=(-0.253, -0.236), resolution=(1366, 768)))
+sleep(1)
 touch(Template(r"tpl1546074092173.png", record_pos=(-0.339, -0.237), resolution=(1366, 768)))
 sleep(1)
 touch(Template(r"tpl1546934613612.png", record_pos=(-0.444, -0.143), resolution=(1366, 768)))
@@ -17,7 +19,7 @@ touch(Template(r"tpl1546071874112.png", record_pos=(0.252, -0.144), resolution=(
 assert_exists(Template(r"tpl1546071908607.png", record_pos=(0.354, -0.085), resolution=(1366, 768)), "验证下单打包费是否已增加")
 # 验证购物车中订单金额是否正确
 total_price=poco("com.yhbc.tablet:id/tv_total").get_text()
-assert_equal("22.0",total_price,"验证商品+打包费金额是否=21")
+assert_equal("21.0",total_price,"验证商品+打包费金额是否=21")
 
 touch(Template(r"tpl1546071932023.png", record_pos=(0.283, 0.222), resolution=(1366, 768)))
 sleep(2.0)

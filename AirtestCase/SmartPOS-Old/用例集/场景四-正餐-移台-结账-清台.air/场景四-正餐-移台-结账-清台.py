@@ -208,3 +208,4 @@ touch(Template(r"tpl1545989156526.png", record_pos=(0.063, 0.033), resolution=(1
 sleep(2.0)
 b1_stat=poco("com.yhbc.tablet:id/gv_menu").child("android.widget.RelativeLayout")[0].child("com.yhbc.tablet:id/rl_item").child("android.widget.LinearLayout").child("com.yhbc.tablet:id/tv_state").get_text()
 assert_equal("空闲",b1_stat," 验证B1桌台清台是否成功")
+

@@ -127,3 +127,4 @@ assert_equal("11.8",order_total_price," 订单详情-验证金额总价是否=11
 pay_mode=poco("com.yhbc.tablet:id/order_listview").child("android.widget.LinearLayout")[0].child("com.yhbc.tablet:id/ll_item").child("com.yhbc.tablet:id/ll_click_pay_model").child("com.yhbc.tablet:id/tv_pay_model").get_text()
 assert_equal("会员卡",pay_mode," 订单详情-验证支付方式=会员卡")
 
+

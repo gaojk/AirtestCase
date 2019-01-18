@@ -69,7 +69,12 @@ sleep(1.0)
 touch(Template(r"tpl1546589873332.png", record_pos=(0.413, 0.217), resolution=(1366, 768)))
 sleep(2.0)
 # 收银台
-touch(Template(r"tpl1546589944922.png", record_pos=(-0.356, 0.018), resolution=(1366, 768)))
+poco("com.yhbc.tablet:id/iv_erase").click()
+sleep(1.0)
+poco(text="抹零小数").click()
+
+# touch(Template(r"tpl1546589944922.png", record_pos=(-0.356, 0.018), resolution=(1366, 768)))
+sleep(1.0)
 #获取收银台应收金额
 yingshou=poco("com.yhbc.tablet:id/tv_realprice").get_text()
 assert_equal("8.0",yingshou,"验证收银台应收金额=8.0")
