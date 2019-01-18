@@ -8,12 +8,14 @@ import io
 import time
 import allcase_list  # 调用数组文件
 import logging.config
+import re
 
 logging.config.fileConfig('logging.conf')
 logger = logging.getLogger('root')
 alltestnames = allcase_list.case_list()
 logger.info(alltestnames)
-conf_root_dir='E:\\AirtestCase\\SmartPOS-Old\\'
+conf_root_dir = 'E:\\AirtestCase\\SmartPOS-Old\\'
+
 
 class CustomAirtestCase(AirtestCase):
     def setUp(self):
@@ -48,9 +50,9 @@ class CustomAirtestCase(AirtestCase):
                 airName = f
                 script = os.path.join(root_dir, f)
                 # airName_path为.air的全路径：D:\tools\airtestCase\案例集\log\手机银行
-                logger.info('执行用例全路径='+script)
+                logger.info('执行用例全路径=' + script)
                 # 日志存放路径和名称：D:\tools\airtestCase\案例集\log\手机银行1
-                log = os.path.join(root_dir, 'log' + '\\' + airName.replace('.air', ''))
+                log = os.path.join(root_dir, 'log' + '\\' +airName.replace('.air', ''))
                 logger.info('用例log保存文件夹=' + log)
                 if os.path.isdir(log):
                     shutil.rmtree(log)
@@ -76,7 +78,7 @@ class CustomAirtestCase(AirtestCase):
                     result["result"] = rpt.test_result
                     results.append(result)
         # 生成聚合报告
-        root_dir_summary = conf_root_dir+'summary-log'
+        root_dir_summary = conf_root_dir + 'summary-log'
         logger.info(root_dir)
         env = jinja2.Environment(
             loader=jinja2.FileSystemLoader(root_dir_summary),
@@ -84,7 +86,7 @@ class CustomAirtestCase(AirtestCase):
             autoescape=True
         )
         now = time.strftime("%Y%m%d-%H%M%S", time.localtime(time.time()))
-        summary_name=now+"summary.html"
+        summary_name = now + "summary.html"
 
         template = env.get_template("summary_template.html", root_dir_summary)
         html = template.render({"results": results})
@@ -96,6 +98,12 @@ class CustomAirtestCase(AirtestCase):
 
 if __name__ == '__main__':
     test = CustomAirtestCase()
-    device = ['android:2d87aa41']
-    # device = ['android:127.0.0.1:62001']
-    test.run_air(conf_root_dir+'用例集', device)
+    # device = ['android:DB04D88900018']  # 商米D1s
+    device = ['android:2d87aa41']  # 商米D1
+    # device = ['android:172.16.32.31:8888']#,'android:172.16.32.32:8888'
+    for d in device:
+        # print("d="+d)
+        # device_ip = re.search("android:(.*):8888", d).group(1)  # 截取当前地址中的order_num
+        # print('device_ip=' + device_ip)
+        test.run_air(conf_root_dir + '用例集', d)
+    # test.run_air(conf_root_dir + '用例集', device)
