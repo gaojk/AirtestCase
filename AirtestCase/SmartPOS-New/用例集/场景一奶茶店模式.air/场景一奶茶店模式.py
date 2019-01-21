@@ -152,4 +152,7 @@ assert_equal("11.8",order_total_price," 订单详情-验证金额总价是否=11
 pay_mode=poco("com.yhbc.yhz.dinner:id/lv_order").child("com.yhbc.yhz.dinner:id/layout_item")[0].child("com.yhbc.yhz.dinner:id/tv_pay_mode").get_text()
 assert_equal("会员卡",pay_mode," 订单详情-验证支付方式=会员卡")
 
+# 还原桌面
+touch(Template(r"tpl1547783142856.png", record_pos=(-0.454, -0.254), resolution=(1366, 768)))
+
 

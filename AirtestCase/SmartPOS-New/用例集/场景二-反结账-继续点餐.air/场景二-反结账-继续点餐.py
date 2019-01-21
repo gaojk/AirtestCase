@@ -108,7 +108,7 @@ assert_equal("1.0",fjz_order_total_price," 订单详情-验证金额总价")
 fjz_pay_mode=poco("com.yhbc.yhz.dinner:id/lv_order").child("com.yhbc.yhz.dinner:id/layout_item")[0].child("com.yhbc.yhz.dinner:id/tv_pay_mode").get_text()
 assert_equal("混合支付",fjz_pay_mode," 订单详情-验证支付方式")
 
-# 验证订单状态是否为已退款
+# 验证订单状态
 fjz_order_state=poco("android.widget.LinearLayout").offspring("com.yhbc.yhz.dinner:id/rl_common").child("android.widget.LinearLayout").offspring("com.yhbc.yhz.dinner:id/lv_order").offspring("com.yhbc.yhz.dinner:id/tv_pay_status").get_text()# 获取订单状态值
 print("fjz_order_state="+fjz_order_state)
 assert_equal("已结账",fjz_order_state," 订单详情-验证反结账之后订单状态")
