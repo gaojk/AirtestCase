@@ -68,6 +68,7 @@ sleep(1.0)
 
 touch(Template(r"tpl1547780856322.png", record_pos=(-0.331, 0.214), resolution=(1366, 768)))
 sleep(2.0)
+# 抹零小数点
 poco("com.yhbc.yhz.dinner:id/rb_erase_decimal").click()
 
 touch(Template(r"tpl1548043518507.png", record_pos=(0.403, 0.155), resolution=(1366, 768)))
