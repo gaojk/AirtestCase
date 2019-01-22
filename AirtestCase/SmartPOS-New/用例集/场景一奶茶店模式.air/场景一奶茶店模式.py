@@ -156,3 +156,4 @@ assert_equal("会员卡",pay_mode," 订单详情-验证支付方式=会员卡")
 touch(Template(r"tpl1547783142856.png", record_pos=(-0.454, -0.254), resolution=(1366, 768)))
 
 
+
