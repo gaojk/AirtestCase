@@ -144,6 +144,7 @@ touch(Template(r"tpl1547632628855.png", record_pos=(-0.103, -0.206), resolution=
 sleep(2.0)
 # 验证已结账订单金额是否正确
 order_total_price=poco("com.yhbc.yhz.dinner:id/tv_buy_price").get_text()
+
 print("order_total_price="+order_total_price)
 # 打包盒、餐具费不参与打折
 assert_equal("11.8",order_total_price," 订单详情-验证金额总价是否=11.8")

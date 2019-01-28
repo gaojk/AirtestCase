@@ -77,17 +77,19 @@ poco(text="重复订单").click()
 sleep(1)
 touch(Template(r"tpl1547781954392.png", record_pos=(0.034, -0.102), resolution=(1366, 768)))
 # keyevent("1234567")
+# 输入退款密码
+text("1234567")
 sleep(1)
 # text("1234567")
 # 输入退款密码
-touch(Template(r"tpl1547783712561.png", record_pos=(-0.428, 0.223), resolution=(1366, 768)))
-touch(Template(r"tpl1547783725287.png", record_pos=(-0.229, 0.092), resolution=(1366, 768)))
-touch(Template(r"tpl1547783895304.png", record_pos=(-0.001, 0.089), resolution=(1366, 768)))
-touch(Template(r"tpl1547783902238.png", record_pos=(0.225, 0.091), resolution=(1366, 768)))
-touch(Template(r"tpl1547783907419.png", record_pos=(-0.228, 0.133), resolution=(1366, 768)))
-touch(Template(r"tpl1547783913498.png", record_pos=(0.001, 0.134), resolution=(1366, 768)))
-touch(Template(r"tpl1547783919408.png", record_pos=(0.225, 0.132), resolution=(1366, 768)))
-touch(Template(r"tpl1547783925363.png", record_pos=(-0.228, 0.175), resolution=(1366, 768)))
+# touch(Template(r"tpl1547783712561.png", record_pos=(-0.428, 0.223), resolution=(1366, 768)))
+# touch(Template(r"tpl1547783725287.png", record_pos=(-0.229, 0.092), resolution=(1366, 768)))
+# touch(Template(r"tpl1547783895304.png", record_pos=(-0.001, 0.089), resolution=(1366, 768)))
+# touch(Template(r"tpl1547783902238.png", record_pos=(0.225, 0.091), resolution=(1366, 768)))
+# touch(Template(r"tpl1547783907419.png", record_pos=(-0.228, 0.133), resolution=(1366, 768)))
+# touch(Template(r"tpl1547783913498.png", record_pos=(0.001, 0.134), resolution=(1366, 768)))
+# touch(Template(r"tpl1547783919408.png", record_pos=(0.225, 0.132), resolution=(1366, 768)))
+# touch(Template(r"tpl1547783925363.png", record_pos=(-0.228, 0.175), resolution=(1366, 768)))
 
 sleep(1)
 touch(Template(r"tpl1547782003242.png", record_pos=(0.042, -0.036), resolution=(1366, 768)))
@@ -110,4 +112,5 @@ assert_equal("已退款",tk_order_state," 订单详情-验证订单状态=已退
 
 # 还原桌面
 touch(Template(r"tpl1547783142856.png", record_pos=(-0.454, -0.254), resolution=(1366, 768)))
+
 

@@ -71,14 +71,16 @@ touch(Template(r"tpl1547781276325.png", record_pos=(0.037, -0.135), resolution=(
 
 sleep(1)
 # 输入退款密码
-touch(Template(r"tpl1547783712561.png", record_pos=(-0.428, 0.223), resolution=(1366, 768)))
-touch(Template(r"tpl1547783725287.png", record_pos=(-0.229, 0.092), resolution=(1366, 768)))
-touch(Template(r"tpl1547783895304.png", record_pos=(-0.001, 0.089), resolution=(1366, 768)))
-touch(Template(r"tpl1547783902238.png", record_pos=(0.225, 0.091), resolution=(1366, 768)))
-touch(Template(r"tpl1547783907419.png", record_pos=(-0.228, 0.133), resolution=(1366, 768)))
-touch(Template(r"tpl1547783913498.png", record_pos=(0.001, 0.134), resolution=(1366, 768)))
-touch(Template(r"tpl1547783919408.png", record_pos=(0.225, 0.132), resolution=(1366, 768)))
-touch(Template(r"tpl1547783925363.png", record_pos=(-0.228, 0.175), resolution=(1366, 768)))
+text("1234567")
+
+# touch(Template(r"tpl1547783712561.png", record_pos=(-0.428, 0.223), resolution=(1366, 768)))
+# touch(Template(r"tpl1547783725287.png", record_pos=(-0.229, 0.092), resolution=(1366, 768)))
+# touch(Template(r"tpl1547783895304.png", record_pos=(-0.001, 0.089), resolution=(1366, 768)))
+# touch(Template(r"tpl1547783902238.png", record_pos=(0.225, 0.091), resolution=(1366, 768)))
+# touch(Template(r"tpl1547783907419.png", record_pos=(-0.228, 0.133), resolution=(1366, 768)))
+# touch(Template(r"tpl1547783913498.png", record_pos=(0.001, 0.134), resolution=(1366, 768)))
+# touch(Template(r"tpl1547783919408.png", record_pos=(0.225, 0.132), resolution=(1366, 768)))
+# touch(Template(r"tpl1547783925363.png", record_pos=(-0.228, 0.175), resolution=(1366, 768)))
 
 sleep(1)
 touch(Template(r"tpl1547781302399.png", record_pos=(0.045, -0.037), resolution=(1366, 768)))
@@ -115,6 +117,7 @@ assert_equal("已结账",fjz_order_state," 订单详情-验证反结账之后订
 
 # 还原桌面
 touch(Template(r"tpl1547783142856.png", record_pos=(-0.454, -0.254), resolution=(1366, 768)))
+
 
 
 

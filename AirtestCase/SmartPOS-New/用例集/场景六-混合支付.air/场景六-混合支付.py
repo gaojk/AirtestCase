@@ -17,7 +17,7 @@ touch(Template(r"tpl1547631039247.png", record_pos=(0.158, -0.17), resolution=(1
 sleep(1)
 # 打包 
 touch(Template(r"tpl1547631244440.png", record_pos=(-0.141, -0.029), resolution=(1366, 768)))
-sleep(1)
+sleep(3)
 touch(Template(r"tpl1547631288153.png", record_pos=(-0.059, -0.207), resolution=(1366, 768)))
 
 sleep(1)
@@ -45,16 +45,26 @@ touch(Template(r"tpl1548043518507.png", record_pos=(0.403, 0.155), resolution=(1
 touch(Template(r"tpl1548043528582.png", record_pos=(0.435, -0.065), resolution=(1366, 768)))
 touch(Template(r"tpl1548054202672.png", record_pos=(0.335, 0.214), resolution=(1366, 768)))
 
+sleep(5)
+touch(Template(r"tpl1548053320624.png", record_pos=(-0.039, 0.08), resolution=(1366, 768)))
 sleep(3.0)
+touch(Template(r"tpl1548052996562.png", record_pos=(0.365, -0.187), resolution=(1366, 768)))
+sleep(2.0)
+touch(Template(r"tpl1548052816834.png", record_pos=(0.401, 0.155), resolution=(1366, 768)))
+sleep(5)
+touch(Template(r"tpl1548052827431.png", record_pos=(0.231, -0.067), resolution=(1366, 768)))
+sleep(6)
+touch(Template(r"tpl1548146566590.png", record_pos=(0.333, 0.209), resolution=(1366, 768)))
+sleep(6)
+
 # 会员支付
 
 touch(Template(r"tpl1547632344050.png", record_pos=(0.143, 0.013), resolution=(1366, 768)))
-touch(Template(r"tpl1548052996562.png", record_pos=(0.365, -0.187), resolution=(1366, 768)))
-touch(Template(r"tpl1548052816834.png", record_pos=(0.401, 0.155), resolution=(1366, 768)))
-touch(Template(r"tpl1548052827431.png", record_pos=(0.231, -0.067), resolution=(1366, 768)))
-touch(Template(r"tpl1548053011292.png", record_pos=(0.368, -0.146), resolution=(1366, 768)))
-sleep(2)
+
+# touch(Template(r"tpl1548053011292.png", record_pos=(0.368, -0.146), resolution=(1366, 768)))
+sleep(3)
 touch(Template(r"tpl1547632368213.png", record_pos=(0.231, -0.065), resolution=(1366, 768)))
+
 touch(Template(r"tpl1547632374545.png", record_pos=(0.299, -0.011), resolution=(1366, 768)))
 touch(Template(r"tpl1547632374545.png", record_pos=(0.299, -0.011), resolution=(1366, 768)))
 touch(Template(r"tpl1547632374545.png", record_pos=(0.299, -0.011), resolution=(1366, 768)))
@@ -75,9 +85,7 @@ assert_equal("账号: 15557168663",member_no,"收银台会员支付，查询会�
 touch(Template(r"tpl1547632556603.png", record_pos=(0.045, 0.071), resolution=(1366, 768)))
 
 touch(Template(r"tpl1548043826259.png", record_pos=(0.406, 0.212), resolution=(1366, 768)))
-sleep(2)
-touch(Template(r"tpl1548053320624.png", record_pos=(-0.039, 0.08), resolution=(1366, 768)))
-touch(Template(r"tpl1548043826259.png", record_pos=(0.406, 0.212), resolution=(1366, 768)))
+
 
 
 
@@ -86,7 +94,7 @@ sleep(2.0)
 touch(Template(r"tpl1547632610096.png", record_pos=(-0.469, 0.109), resolution=(1366, 768)))
 sleep(1.0)
 touch(Template(r"tpl1547632628855.png", record_pos=(-0.103, -0.206), resolution=(1366, 768)))
-sleep(2.0)
+sleep(5.0)
 # 验证已结账订单金额是否正确
 order_total_price=poco("com.yhbc.yhz.dinner:id/tv_buy_price").get_text()
 print("order_total_price="+order_total_price)
@@ -102,6 +110,7 @@ print("order_state="+order_state)
 assert_equal("已结账",order_state," 订单详情-验证反结账之后订单状态")
 # 还原桌面
 touch(Template(r"tpl1547783142856.png", record_pos=(-0.454, -0.254), resolution=(1366, 768)))
+
 
 
 

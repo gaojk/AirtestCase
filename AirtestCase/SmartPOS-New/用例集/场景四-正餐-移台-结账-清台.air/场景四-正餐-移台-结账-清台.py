@@ -121,6 +121,8 @@ touch(Template(r"tpl1547632610096.png", record_pos=(-0.469, 0.109), resolution=(
 sleep(1.0)
 touch(Template(r"tpl1547632628855.png", record_pos=(-0.103, -0.206), resolution=(1366, 768)))
 sleep(2.0)
+snapshot(msg="B1订单结账")
+
 # 验证已结账订单金额是否正确
 # b1order_total_price=poco("com.yhbc.yhz.dinner:id/countTextView").get_text()
 
@@ -133,7 +135,7 @@ sleep(2.0)
 touch(Template(r"tpl1548123887281.png", record_pos=(-0.469, -0.149), resolution=(1366, 768)))
 touch(Template(r"tpl1548136343906.png", record_pos=(-0.061, -0.253), resolution=(1366, 768)))
 touch(Template(r"tpl1548127346024.png", record_pos=(-0.141, -0.097), resolution=(1366, 768)))
-
+sleep(3)
 touch(Template(r"tpl1548127356434.png", record_pos=(0.044, 0.071), resolution=(1366, 768)))
 sleep(3)
 
@@ -160,5 +162,6 @@ touch(Template(r"tpl1548123887281.png", record_pos=(-0.469, -0.149), resolution=
 touch(Template(r"tpl1548136106172.png", record_pos=(0.045, -0.25), resolution=(1366, 768)))
 # B2清台
 touch(Template(r"tpl1548127346024.png", record_pos=(-0.141, -0.097), resolution=(1366, 768)))
+sleep(3)
 touch(Template(r"tpl1548127356434.png", record_pos=(0.044, 0.071), resolution=(1366, 768)))
 sleep(1)
