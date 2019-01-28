@@ -10,7 +10,7 @@ import allcase_list  # 调用数组文件
 import logging.config
 import re
 
-logging.config.fileConfig('logging.conf')
+logging.config.fileConfig('../logging.conf')
 logger = logging.getLogger('root')
 alltestnames = allcase_list.case_list()
 logger.info(alltestnames)
@@ -76,6 +76,7 @@ class CustomAirtestCase(AirtestCase):
                     result = {}
                     result["name"] = airName.replace('.air', '')
                     result["result"] = rpt.test_result
+                    result["conf_root_dir"] = conf_root_dir
                     results.append(result)
         # 生成聚合报告
         root_dir_summary = conf_root_dir + 'summary-log'
