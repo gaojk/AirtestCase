@@ -37,7 +37,7 @@
         </tr>
         {% for r in results %}
         <tr width="600">
-            <td class='details-col-elapsed'><a href='E:/AirtestCase/SmartPOS-Old/用例集/log/{{r.name}}/log.html' target="view_window">{{r.name}}</a></td>
+            <td class='details-col-elapsed'><a href='{{r.conf_root_dir}}用例集/log/{{r.name}}/log.html' target="view_window">{{r.name}}</a></td>
             <td class="{{'success' if r.result else 'fail'}}">{{"成功" if r.result else "失败"}}</td>
         </tr>
         {% endfor %}
