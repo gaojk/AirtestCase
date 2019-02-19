@@ -69,7 +69,11 @@ sleep(1.0)
 touch(Template(r"tpl1547780856322.png", record_pos=(-0.331, 0.214), resolution=(1366, 768)))
 sleep(2.0)
 # 抹零小数点
-poco("com.yhbc.yhz.dinner:id/rb_erase_decimal").click()
+poco("com.yhbc.yhz.dinner:id/rb_erase_other").click()
+sleep(1.0)
+poco(text="抹零到个位").click()
+
+# poco("com.yhbc.yhz.dinner:id/rb_erase_decimal").click()
 
 touch(Template(r"tpl1548043518507.png", record_pos=(0.403, 0.155), resolution=(1366, 768)))
 touch(Template(r"tpl1548058837394.png", record_pos=(0.433, 0.045), resolution=(1366, 768)))
