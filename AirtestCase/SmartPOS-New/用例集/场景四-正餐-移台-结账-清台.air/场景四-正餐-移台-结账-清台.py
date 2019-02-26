@@ -145,7 +145,7 @@ sleep(3)
 touch(Template(r"tpl1548127126999.png", record_pos=(-0.247, 0.212), resolution=(1366, 768)))
 sleep(2)
 touch(Template(r"tpl1548127146975.png", record_pos=(0.332, 0.212), resolution=(1366, 768)))
-sleep(1.0)
+sleep(3.0)
 # 查看B2订单
 touch(Template(r"tpl1547632610096.png", record_pos=(-0.469, 0.109), resolution=(1366, 768)))
 sleep(1.0)

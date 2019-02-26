@@ -78,7 +78,7 @@ sleep(1)
 touch(Template(r"tpl1547781954392.png", record_pos=(0.034, -0.102), resolution=(1366, 768)))
 # keyevent("1234567")
 # 输入退款密码
-text("1234567")
+text("12345678")
 sleep(1)
 # text("1234567")
 # 输入退款密码
