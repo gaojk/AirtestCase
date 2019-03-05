@@ -4,6 +4,12 @@ __author__ = "lsd"
 
 from airtest.core.api import *
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
+stop_app("com.yhbc.yhz.dinner")
+start_app("com.yhbc.yhz.dinner",activity=None)
+sleep(3)
+touch(Template(r"tpl1551372987427.png", record_pos=(-0.001, -0.013), resolution=(1366, 768)))
+sleep(8)
+
 poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=False)
 auto_setup(__file__)
 # 顾客A操作 
@@ -13,11 +19,9 @@ touch(Template(r"tpl1548123922047.png", record_pos=(-0.06, -0.173), resolution=(
 sleep(2.0)
 assert_exists(Template(r"tpl1548123982224.png", record_pos=(-0.142, -0.165), resolution=(1366, 768)), "验证是否弹出订单人数选择框")
 touch(Template(r"tpl1548124006973.png", record_pos=(0.079, -0.07), resolution=(1366, 768)))
-
 touch(Template(r"tpl1548124023254.png", record_pos=(-0.003, 0.1), resolution=(1366, 768)))
-
 sleep(1)
-
+touch(Template(r"tpl1547630742496.png", record_pos=(0.452, -0.206), resolution=(1366, 768)))
 touch(Template(r"tpl1548124051508.png", record_pos=(0.144, -0.253), resolution=(1366, 768)))
 
 sleep(1)
@@ -88,6 +92,7 @@ sleep(1.0)
 touch(Template(r"tpl1548125230886.png", record_pos=(-0.065, -0.251), resolution=(1366, 768)))
 sleep(1.0)
 touch(Template(r"tpl1548125621326.png", record_pos=(-0.37, 0.21), resolution=(1366, 768)))
+sleep(2.0)
 
 touch(Template(r"tpl1548125740826.png", record_pos=(0.246, -0.247), resolution=(1366, 768)))
 touch(Template(r"tpl1548125768964.png", record_pos=(-0.247, 0.213), resolution=(1366, 768)))
@@ -117,20 +122,15 @@ touch(Template(r"tpl1548127703165.png", record_pos=(0.367, -0.01), resolution=(1
 touch(Template(r"tpl1548127738201.png", record_pos=(0.335, 0.213), resolution=(1366, 768)))
 sleep(3.0)
 # 查看B1订单
-touch(Template(r"tpl1547632610096.png", record_pos=(-0.469, 0.109), resolution=(1366, 768)))
-sleep(1.0)
-touch(Template(r"tpl1547632628855.png", record_pos=(-0.103, -0.206), resolution=(1366, 768)))
-sleep(2.0)
-snapshot(msg="B1订单结账")
 
 # 验证已结账订单金额是否正确
-# b1order_total_price=poco("com.yhbc.yhz.dinner:id/countTextView").get_text()
+# b1order_total_price=poco("com.yhbc.yhz.dinner:id/tv_buy_price").get_text()
 
 # print("b1order_total_price="+b1order_total_price)
 # # 打包盒、餐具费不参与打折
 # assert_equal("共4份，合计7.8元",b1order_total_price," B1订单详情-验证金额总价")
-touch(Template(r"tpl1547783142856.png", record_pos=(-0.454, -0.254), resolution=(1366, 768)))
-sleep(2.0)
+# touch(Template(r"tpl1547783142856.png", record_pos=(-0.454, -0.254), resolution=(1366, 768)))
+# sleep(2.0)
 # B1清台
 touch(Template(r"tpl1548123887281.png", record_pos=(-0.469, -0.149), resolution=(1366, 768)))
 touch(Template(r"tpl1548136343906.png", record_pos=(-0.061, -0.253), resolution=(1366, 768)))
@@ -155,7 +155,7 @@ sleep(2.0)
 b2order_total_price=poco("com.yhbc.yhz.dinner:id/tv_buy_price").get_text()
 print("b2order_total_price="+b2order_total_price)
 # 打包盒、餐具费不参与打折
-assert_equal("25.0",b2order_total_price," 订单详情-验证金额总价")
+assert_equal("23.0",b2order_total_price," 订单详情-验证金额总价")
 touch(Template(r"tpl1547783142856.png", record_pos=(-0.454, -0.254), resolution=(1366, 768)))
 sleep(2.0)
 touch(Template(r"tpl1548123887281.png", record_pos=(-0.469, -0.149), resolution=(1366, 768)))

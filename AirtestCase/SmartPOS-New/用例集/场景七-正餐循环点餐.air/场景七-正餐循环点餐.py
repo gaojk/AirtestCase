@@ -5,11 +5,13 @@ from airtest.core.api import *
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
 auto_setup(__file__)
 # stop_app("com.yhbc.yhz.dinner")
-
-# #  start_app_timing("com.yhbc.yhz.dinner","com.yhbc.tablet.ui.main.MainActivity")
 # start_app("com.yhbc.yhz.dinner",activity=None)
+# sleep(3)
+# touch(Template(r"tpl1551372987427.png", record_pos=(-0.001, -0.013), resolution=(1366, 768)))
+# sleep(8)
+
 poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=False)
-loop_num=1  #循环次数
+loop_num=2  #循环次数
 for i in range(loop_num):
     i=i+1
     print("单脚本中循环次数i="+str(i))
@@ -59,6 +61,7 @@ for i in range(loop_num):
     touch(Template(r"tpl1551064754717.png", record_pos=(-0.138, -0.098), resolution=(1366, 768)))
     touch(Template(r"tpl1551064764767.png", record_pos=(0.042, 0.07), resolution=(1366, 768)))
     sleep(1.0)
+
 
 
 
