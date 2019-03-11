@@ -11,7 +11,7 @@ auto_setup(__file__)
 # sleep(8)
 
 poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=False)
-loop_num=2  #循环次数
+loop_num=1  #循环次数
 for i in range(loop_num):
     i=i+1
     print("单脚本中循环次数i="+str(i))
