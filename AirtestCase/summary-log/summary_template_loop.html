@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>测试结果汇总</title>
+    <style>
+        .fail {
+            color: red;
+			width: 7emem;
+			text-align: center;
+        }
+        .success {
+            color: green;
+			width: 7emem;
+			text-align: center;
+        }
+		.details-col-elapsed {
+			width: 7em;
+			text-align: center;
+		}
+		.details-col-msg {
+			width: 7em;
+			text-align: center;
+			background-color:#ccc;
+		}
+		.details-col-resultNum {
+			width: 7em;
+			text-align: center;
+		}
+    </style>
+</head>
+<body>
+<div>
+<div><h2>用例执行统计</h2></div>
+
+    <table width="800" border="thin" cellspacing="0" cellpadding="0">
+        <tr  width="600">
+            <th width="300" class='details-col-msg'>案例名称</th>
+            <th class='details-col-msg'>执行结果</th>
+        </tr>
+        {% for r in results %}
+        <tr width="600">
+            <td class='details-col-elapsed'><a href='{{r.conf_root_dir}}用例集循环/log/{{r.name}}/log.html' target="view_window">{{r.name}}</a></td>
+            <td class="{{'success' if r.result else 'fail'}}">{{"成功" if r.result else "失败"}}</td>
+        </tr>
+        {% endfor %}
+        <tr width="600">
+            <th class="details-col-resultNum">共执行 {{case_count}} 条用例</th>
+            <th class="details-col-resultNum">成功 {{case_count_success}} 条，失败 {{case_count_fail}} 条</th>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
