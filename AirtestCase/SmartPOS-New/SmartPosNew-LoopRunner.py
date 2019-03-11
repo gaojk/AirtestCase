@@ -84,7 +84,8 @@ class CustomAirtestCase(AirtestCase):
                         results.append(result)
 
         # 生成聚合报告
-        root_dir_summary = conf_root_dir + 'summary-log'
+        # root_dir_summary = conf_root_dir + 'summary-log'
+        root_dir_summary = '../summary-log'
         logger.info(root_dir)
         env = jinja2.Environment(
             loader=jinja2.FileSystemLoader(root_dir_summary),
@@ -106,8 +107,8 @@ class CustomAirtestCase(AirtestCase):
 
 if __name__ == '__main__':
     test = CustomAirtestCase()
-    # device = ['android:DB04D88900018']  # 商米D1s
-    device = ['android:2d87aa41']  # 商米D1
+    device = ['android:DB04D88900018']  # 商米D1s
+    # device = ['android:2d87aa41']  # 商米D1
     # device = ['android:172.16.32.31:8888']#,'android:172.16.32.32:8888'
     for d in device:
         # print("d="+d)
