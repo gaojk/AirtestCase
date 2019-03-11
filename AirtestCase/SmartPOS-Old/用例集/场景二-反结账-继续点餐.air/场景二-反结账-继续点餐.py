@@ -4,6 +4,11 @@ __author__ = "lsd"
 
 from airtest.core.api import *
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
+stop_app("com.yhbc.tablet")
+start_app("com.yhbc.tablet",activity=None)
+touch(Template(r"tpl1550659223584.png", record_pos=(0.305, -0.063), resolution=(1366, 768)))
+sleep(10)
+
 poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=False)
 auto_setup(__file__)
 # 点餐操作

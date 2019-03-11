@@ -4,6 +4,11 @@ __author__ = "lsd"
 
 from airtest.core.api import *
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
+stop_app("com.yhbc.tablet")
+start_app("com.yhbc.tablet",activity=None)
+touch(Template(r"tpl1550659223584.png", record_pos=(0.305, -0.063), resolution=(1366, 768)))
+sleep(10)
+
 poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=False)
 
 auto_setup(__file__)
@@ -97,7 +102,9 @@ touch(Template(r"tpl1546072136278.png", record_pos=(0.161, -0.236), resolution=(
 
 sleep(2.0)
 # 验证已结账订单金额是否正确
-order_total_price=poco("com.yhbc.tablet:id/tv_total_price").get_text()
+order_total_price=poco("android.widget.LinearLayout").offspring("android:id/content").offspring("com.yhbc.tablet:id/viewpager").child("android.widget.LinearLayout").offspring("com.yhbc.tablet:id/order_listview").offspring("com.yhbc.tablet:id/tv_total_price").get_text()
+
+
 print("order_total_price="+order_total_price)
 # 打包盒、餐具费不参与打折
 assert_equal("8.0",order_total_price," 订单详情-验证金额总价是否=8.0")
@@ -105,3 +112,4 @@ assert_equal("8.0",order_total_price," 订单详情-验证金额总价是否=8.0
 # 验证已结账订单支付方式
 pay_mode=poco("com.yhbc.tablet:id/order_listview").child("android.widget.LinearLayout")[0].child("com.yhbc.tablet:id/ll_item").child("com.yhbc.tablet:id/ll_click_pay_model").child("com.yhbc.tablet:id/tv_pay_model").get_text()
 assert_equal("人工现金",pay_mode," 订单详情-验证支付方式=人工现金")
+
