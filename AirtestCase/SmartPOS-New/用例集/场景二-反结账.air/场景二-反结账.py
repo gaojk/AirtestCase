@@ -6,7 +6,7 @@ from airtest.core.api import *
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
 stop_app("com.yhbc.yhz.dinner")
 start_app("com.yhbc.yhz.dinner",activity=None)
-sleep(3)
+sleep(4)
 touch(Template(r"tpl1551372987427.png", record_pos=(-0.001, -0.013), resolution=(1366, 768)))
 sleep(8)
 
@@ -22,7 +22,8 @@ sleep(1)
 touch(Template(r"tpl1547631915083.png", record_pos=(0.346, -0.255), resolution=(1366, 768)))
 touch(Template(r"tpl1547631944787.png", record_pos=(-0.056, -0.15), resolution=(1366, 768)))
 
-touch(Template(r"tpl1547631959855.png", record_pos=(-0.057, 0.024), resolution=(1366, 768)))
+touch(Template(r"tpl1552361690780.png", record_pos=(-0.054, 0.012), resolution=(1366, 768)))
+
 touch(Template(r"tpl1547631969287.png", record_pos=(0.017, -0.097), resolution=(1366, 768)))
 touch(Template(r"tpl1547631988934.png", record_pos=(0.019, 0.219), resolution=(1366, 768)))
 
@@ -45,7 +46,8 @@ poco("com.yhbc.yhz.dinner:id/iv_close").click()
 sleep(2)
 assert_exists(Template(r"tpl1547631378794.png", record_pos=(-0.311, -0.087), resolution=(1366, 768)), "菜单显示打包")
 
-touch(Template(r"tpl1547780856322.png", record_pos=(-0.331, 0.214), resolution=(1366, 768)))
+touch(Template(r"tpl1552370125658.png", record_pos=(-0.332, 0.205), resolution=(1366, 768)))
+
 
 sleep(2.0)
 touch(Template(r"tpl1547780910794.png", record_pos=(0.334, 0.214), resolution=(1366, 768)))
@@ -81,7 +83,10 @@ poco("com.yhbc.yhz.dinner:id/iv_reason").click()
 poco(text="重复订单").click()
 
 sleep(1)
-touch(Template(r"tpl1547781954392.png", record_pos=(0.034, -0.102), resolution=(1366, 768)))
+
+poco("com.yhbc.yhz.dinner:id/et_password").click()
+
+
 # keyevent("1234567")
 # 输入退款密码
 text("12345678")
@@ -118,5 +123,6 @@ assert_equal("已退款",tk_order_state," 订单详情-验证订单状态=已退
 
 # 还原桌面
 touch(Template(r"tpl1547783142856.png", record_pos=(-0.454, -0.254), resolution=(1366, 768)))
+
 
 

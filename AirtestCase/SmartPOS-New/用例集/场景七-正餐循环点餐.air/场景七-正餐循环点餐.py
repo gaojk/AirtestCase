@@ -53,8 +53,10 @@ for i in range(loop_num):
     touch(Template(r"tpl1551064332145.png", record_pos=(-0.369, 0.212), resolution=(1366, 768)))
     sleep(1.0)
     touch(Template(r"tpl1551064365790.png", record_pos=(-0.037, 0.012), resolution=(1366, 768)))
+    sleep(1.0)
+#     touch(Template(r"tpl1548054202672.png", record_pos=(0.335, 0.214), resolution=(1366, 768)))
+    touch(Template(r"tpl1552359826417.png", record_pos=(0.327, 0.21), resolution=(1366, 768)))
 
-    touch(Template(r"tpl1548054202672.png", record_pos=(0.335, 0.214), resolution=(1366, 768)))
     
     sleep(2.0)
     touch(Template(r"tpl1551064728167.png", record_pos=(0.04, -0.092), resolution=(1366, 768)))

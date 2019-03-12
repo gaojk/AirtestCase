@@ -7,7 +7,7 @@ from airtest.core.api import *
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
 stop_app("com.yhbc.yhz.dinner")
 start_app("com.yhbc.yhz.dinner",activity=None)
-sleep(3)
+sleep(4)
 touch(Template(r"tpl1551372987427.png", record_pos=(-0.001, -0.013), resolution=(1366, 768)))
 sleep(8)
 
@@ -88,7 +88,8 @@ sleep(1)
 touch(Template(r"tpl1547631915083.png", record_pos=(0.346, -0.255), resolution=(1366, 768)))
 touch(Template(r"tpl1547631944787.png", record_pos=(-0.056, -0.15), resolution=(1366, 768)))
 
-touch(Template(r"tpl1547631959855.png", record_pos=(-0.057, 0.024), resolution=(1366, 768)))
+touch(Template(r"tpl1552361690780.png", record_pos=(-0.054, 0.012), resolution=(1366, 768)))
+
 touch(Template(r"tpl1547631969287.png", record_pos=(0.017, -0.097), resolution=(1366, 768)))
 touch(Template(r"tpl1547631988934.png", record_pos=(0.019, 0.219), resolution=(1366, 768)))
 
@@ -160,6 +161,7 @@ pay_mode=poco("com.yhbc.yhz.dinner:id/lv_order").child("com.yhbc.yhz.dinner:id/l
 assert_equal("会员卡",pay_mode," 订单详情-验证支付方式=会员卡")
 
 touch(Template(r"tpl1547783142856.png", record_pos=(-0.454, -0.254), resolution=(1366, 768)))
+
 
 
 

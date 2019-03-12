@@ -21,7 +21,9 @@ sleep(1)
 touch(Template(r"tpl1547631915083.png", record_pos=(0.346, -0.255), resolution=(1366, 768)))
 touch(Template(r"tpl1547631944787.png", record_pos=(-0.056, -0.15), resolution=(1366, 768)))
 
-touch(Template(r"tpl1547631959855.png", record_pos=(-0.057, 0.024), resolution=(1366, 768)))
+touch(Template(r"tpl1552361690780.png", record_pos=(-0.054, 0.012), resolution=(1366, 768)))
+
+
 touch(Template(r"tpl1547631969287.png", record_pos=(0.017, -0.097), resolution=(1366, 768)))
 touch(Template(r"tpl1547631988934.png", record_pos=(0.019, 0.219), resolution=(1366, 768)))
 
@@ -44,7 +46,8 @@ sleep(1)
 poco("com.yhbc.yhz.dinner:id/iv_close").click()
 sleep(2)
 assert_exists(Template(r"tpl1547631378794.png", record_pos=(-0.311, -0.087), resolution=(1366, 768)), "菜单显示打包")
-touch(Template(r"tpl1547780856322.png", record_pos=(-0.331, 0.214), resolution=(1366, 768)))
+touch(Template(r"tpl1552370125658.png", record_pos=(-0.332, 0.205), resolution=(1366, 768)))
+
 sleep(1.0)
 touch(Template(r"tpl1547780910794.png", record_pos=(0.334, 0.214), resolution=(1366, 768)))
 sleep(2.0)
@@ -73,7 +76,7 @@ sleep(1)
 assert_exists(Template(r"tpl1547781214610.png", record_pos=(-0.001, -0.018), resolution=(1366, 768)), "验证弹出确定反结账确定窗口")
 touch(Template(r"tpl1547781233855.png", record_pos=(0.045, 0.074), resolution=(1366, 768)))
 sleep(1)
-touch(Template(r"tpl1547781276325.png", record_pos=(0.037, -0.135), resolution=(1366, 768)))
+touch(Template(r"tpl1552370622988.png", record_pos=(-0.023, -0.038), resolution=(1366, 768)))
 
 sleep(1)
 # 输入退款密码
@@ -95,7 +98,8 @@ sleep(10)
 
 touch(Template(r"tpl1547799179040.png", record_pos=(-0.141, -0.114), resolution=(1366, 768)))
 sleep(1)
-touch(Template(r"tpl1547799191497.png", record_pos=(0.083, -0.2), resolution=(1366, 768)))
+touch(Template(r"tpl1552370795391.png", record_pos=(0.078, -0.201), resolution=(1366, 768)))
+
 
 touch(Template(r"tpl1547799235189.png", record_pos=(0.075, 0.138), resolution=(1366, 768)))
 touch(Template(r"tpl1547799249060.png", record_pos=(0.017, 0.217), resolution=(1366, 768)))
@@ -123,6 +127,7 @@ assert_equal("已结账",fjz_order_state," 订单详情-验证反结账之后订
 
 # 还原桌面
 touch(Template(r"tpl1547783142856.png", record_pos=(-0.454, -0.254), resolution=(1366, 768)))
+
 
 
 

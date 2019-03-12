@@ -6,7 +6,7 @@ from airtest.core.api import *
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
 stop_app("com.yhbc.yhz.dinner")
 start_app("com.yhbc.yhz.dinner",activity=None)
-sleep(3)
+sleep(4)
 touch(Template(r"tpl1551372987427.png", record_pos=(-0.001, -0.013), resolution=(1366, 768)))
 sleep(8)
 
@@ -19,7 +19,8 @@ touch(Template(r"tpl1548123922047.png", record_pos=(-0.06, -0.173), resolution=(
 sleep(2.0)
 assert_exists(Template(r"tpl1548123982224.png", record_pos=(-0.142, -0.165), resolution=(1366, 768)), "验证是否弹出订单人数选择框")
 touch(Template(r"tpl1548124006973.png", record_pos=(0.079, -0.07), resolution=(1366, 768)))
-touch(Template(r"tpl1548124023254.png", record_pos=(-0.003, 0.1), resolution=(1366, 768)))
+touch(Template(r"tpl1552372219443.png", record_pos=(-0.001, 0.094), resolution=(1366, 768)))
+
 sleep(1)
 touch(Template(r"tpl1547630742496.png", record_pos=(0.452, -0.206), resolution=(1366, 768)))
 touch(Template(r"tpl1548124051508.png", record_pos=(0.144, -0.253), resolution=(1366, 768)))
@@ -76,7 +77,7 @@ touch(Template(r"tpl1548125410510.png", record_pos=(0.041, -0.25), resolution=(1
 
 assert_exists(Template(r"tpl1548123982224.png", record_pos=(-0.142, -0.165), resolution=(1366, 768)), "验证是否弹出订单人数选择框")
 touch(Template(r"tpl1548125471751.png", record_pos=(0.001, -0.07), resolution=(1366, 768)))
-touch(Template(r"tpl1548124023254.png", record_pos=(-0.003, 0.1), resolution=(1366, 768)))
+touch(Template(r"tpl1552372219443.png", record_pos=(-0.001, 0.094), resolution=(1366, 768)))
 
 sleep(1)
 touch(Template(r"tpl1547631039247.png", record_pos=(0.158, -0.17), resolution=(1366, 768)))
@@ -105,8 +106,8 @@ touch(Template(r"tpl1548125621326.png", record_pos=(-0.37, 0.21), resolution=(13
 sleep(1.0)
 
 touch(Template(r"tpl1548126017224.png", record_pos=(-0.14, 0.124), resolution=(1366, 768)))
+touch(Template(r"tpl1552372648861.png", record_pos=(0.012, -0.162), resolution=(1366, 768)))
 
-touch(Template(r"tpl1548126043432.png", record_pos=(0.012, -0.162), resolution=(1366, 768)))
 touch(Template(r"tpl1548126078611.png", record_pos=(-0.201, -0.089), resolution=(1366, 768)))
 touch(Template(r"tpl1548126086400.png", record_pos=(0.045, 0.123), resolution=(1366, 768)))
 touch(Template(r"tpl1548126100510.png", record_pos=(0.089, 0.212), resolution=(1366, 768)))
@@ -119,7 +120,8 @@ touch(Template(r"tpl1548127126999.png", record_pos=(-0.247, 0.212), resolution=(
 # 点击订单折扣
 poco("com.yhbc.yhz.dinner:id/et_discount").click()
 touch(Template(r"tpl1548127703165.png", record_pos=(0.367, -0.01), resolution=(1366, 768)))
-touch(Template(r"tpl1548127738201.png", record_pos=(0.335, 0.213), resolution=(1366, 768)))
+touch(Template(r"tpl1552373840993.png", record_pos=(0.329, 0.209), resolution=(1366, 768)))
+
 sleep(3.0)
 # 查看B1订单
 
@@ -144,7 +146,8 @@ touch(Template(r"tpl1548127113183.png", record_pos=(0.042, -0.25), resolution=(1
 sleep(3)
 touch(Template(r"tpl1548127126999.png", record_pos=(-0.247, 0.212), resolution=(1366, 768)))
 sleep(2)
-touch(Template(r"tpl1548127146975.png", record_pos=(0.332, 0.212), resolution=(1366, 768)))
+touch(Template(r"tpl1552373065790.png", record_pos=(0.329, 0.207), resolution=(1366, 768)))
+
 sleep(3.0)
 # 查看B2订单
 touch(Template(r"tpl1547632610096.png", record_pos=(-0.469, 0.109), resolution=(1366, 768)))

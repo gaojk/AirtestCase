@@ -6,7 +6,7 @@ from poco.drivers.android.uiautomation import AndroidUiautomationPoco
 auto_setup(__file__)
 stop_app("com.yhbc.yhz.dinner")
 start_app("com.yhbc.yhz.dinner",activity=None)
-sleep(3)
+sleep(4)
 touch(Template(r"tpl1551372987427.png", record_pos=(-0.001, -0.013), resolution=(1366, 768)))
 sleep(8)
 
@@ -46,16 +46,21 @@ sleep(2)
 prop=poco("com.yhbc.yhz.dinner:id/tv_property").get_text()
 assert_equal("+蓝莓+去冰",prop,"属性显示=+蓝莓+去冰")
 
-touch(Template(r"tpl1547780856322.png", record_pos=(-0.331, 0.214), resolution=(1366, 768)))
+touch(Template(r"tpl1552370125658.png", record_pos=(-0.332, 0.205), resolution=(1366, 768)))
+
 sleep(1.0)
 touch(Template(r"tpl1548043518507.png", record_pos=(0.403, 0.155), resolution=(1366, 768)))
 touch(Template(r"tpl1548043528582.png", record_pos=(0.435, -0.065), resolution=(1366, 768)))
-touch(Template(r"tpl1548054202672.png", record_pos=(0.335, 0.214), resolution=(1366, 768)))
+touch(Template(r"tpl1552373065790.png", record_pos=(0.329, 0.207), resolution=(1366, 768)))
+
 
 sleep(5)
 touch(Template(r"tpl1548053320624.png", record_pos=(-0.039, 0.08), resolution=(1366, 768)))
 sleep(3.0)
-touch(Template(r"tpl1548052996562.png", record_pos=(0.365, -0.187), resolution=(1366, 768)))
+
+touch(Template(r"tpl1552375767769.png", record_pos=(0.359, -0.191), resolution=(1366, 768)))
+
+# touch(Template(r"tpl1548052996562.png", record_pos=(0.365, -0.187), resolution=(1366, 768)))
 sleep(2.0)
 touch(Template(r"tpl1548052816834.png", record_pos=(0.401, 0.155), resolution=(1366, 768)))
 sleep(5)
@@ -117,6 +122,8 @@ print("order_state="+order_state)
 assert_equal("已结账",order_state," 订单详情-验证反结账之后订单状态")
 # 还原桌面
 touch(Template(r"tpl1547783142856.png", record_pos=(-0.454, -0.254), resolution=(1366, 768)))
+
+
 
 
 

@@ -6,7 +6,7 @@ from airtest.core.api import *
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
 stop_app("com.yhbc.yhz.dinner")
 start_app("com.yhbc.yhz.dinner",activity=None)
-sleep(3)
+sleep(5)
 touch(Template(r"tpl1551372987427.png", record_pos=(-0.001, -0.013), resolution=(1366, 768)))
 sleep(8)
 
@@ -40,7 +40,7 @@ sleep(1)
 poco("com.yhbc.yhz.dinner:id/iv_close").click()
 sleep(1)
 touch(Template(r"tpl1548055225423.png", record_pos=(-0.417, -0.259), resolution=(1366, 768)))
-
+sleep(2)
 touch(Template(r"tpl1548055278305.png", record_pos=(-0.366, -0.258), resolution=(1366, 768)))
 touch(Template(r"tpl1548055294391.png", record_pos=(0.211, 0.135), resolution=(1366, 768)))
 sleep(1.0)
@@ -52,7 +52,8 @@ sleep(2.0)
 touch(Template(r"tpl1547631915083.png", record_pos=(0.346, -0.255), resolution=(1366, 768)))
 touch(Template(r"tpl1547631944787.png", record_pos=(-0.056, -0.15), resolution=(1366, 768)))
 
-touch(Template(r"tpl1547631959855.png", record_pos=(-0.057, 0.024), resolution=(1366, 768)))
+touch(Template(r"tpl1552361690780.png", record_pos=(-0.054, 0.012), resolution=(1366, 768)))
+
 touch(Template(r"tpl1547631969287.png", record_pos=(0.017, -0.097), resolution=(1366, 768)))
 touch(Template(r"tpl1547631988934.png", record_pos=(0.019, 0.219), resolution=(1366, 768)))
 sleep(1)
@@ -72,7 +73,8 @@ touch(Template(r"tpl1548055278305.png", record_pos=(-0.366, -0.258), resolution=
 touch(Template(r"tpl1548055294391.png", record_pos=(0.211, 0.135), resolution=(1366, 768)))
 sleep(1.0)
 
-touch(Template(r"tpl1547780856322.png", record_pos=(-0.331, 0.214), resolution=(1366, 768)))
+touch(Template(r"tpl1552370125658.png", record_pos=(-0.332, 0.205), resolution=(1366, 768)))
+
 sleep(2.0)
 # 抹零小数点
 poco("com.yhbc.yhz.dinner:id/rb_erase_other").click()
@@ -86,7 +88,8 @@ touch(Template(r"tpl1551419963104.png", record_pos=(0.083, -0.077), resolution=(
 
 touch(Template(r"tpl1548043518507.png", record_pos=(0.403, 0.155), resolution=(1366, 768)))
 touch(Template(r"tpl1548058837394.png", record_pos=(0.433, 0.045), resolution=(1366, 768)))
-touch(Template(r"tpl1548058844901.png", record_pos=(0.334, 0.214), resolution=(1366, 768)))
+touch(Template(r"tpl1552373065790.png", record_pos=(0.329, 0.207), resolution=(1366, 768)))
+
 sleep(4.0)
 # 查看订单
 touch(Template(r"tpl1547632610096.png", record_pos=(-0.469, 0.109), resolution=(1366, 768)))
